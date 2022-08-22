@@ -25,3 +25,108 @@ Body{
 	color: whitesmoke ;
 	margin-left: 50px;
 }
+
+#pizza{
+  display: block;
+  height: 40px;
+  width: 150px;
+  border: 2px solid #BFC0C0;
+  margin: 10px 20px 20px 20px;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#hamburger{
+	 display: block;
+  height: 40px;
+  width: 150px;
+  border: 2px solid #BFC0C0;
+  margin: 20px 20px 20px 20px;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#sandwiches{
+	 display: block;
+  height: 40px;
+  width: 150px;
+  border: 2px solid #BFC0C0;
+  margin: 20px 20px 20px 20px;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#pasta{
+	 display: block;
+  height: 40px;
+  width: 150px;
+  border: 2px solid #BFC0C0;
+  margin: 20px 20px 20px 20px;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#supplements{
+	 display: block;
+  height: 40px;
+  width: 150px;
+  border: 2px solid #BFC0C0;
+  margin: 20px 20px 20px 20px;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+footer{
+	background-color: rgba(0, 0, 0, 0.678);
+	height: 100px;
+	text-align: center;
+}
+#meat{
+	color: white;
+	font-size: 84px;
+    padding-top: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+	color: white;
+	font-size: 17px;
+}
+#footer1{
+	font-size: 10px;
+	padding-top: 20px;
+}
+#contact{
+	font-size: 15px;
+}
+section{
+	text-align: center;
+}
+main{
+	text-align: center;
+}
