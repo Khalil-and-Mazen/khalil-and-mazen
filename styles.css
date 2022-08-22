@@ -1,3 +1,32 @@
+
+
+html{
+    height: 100%;
+}
+.img{
+	height: 100px;
+	width: auto;
+}
+
+#logo{
+	text-align: left;
+	margin-top: 20px;
+	
+}
+Body{
+    background-color: #2F3035;
+    background-image: url(background-adare-restaurant.jpg);
+    background-size: cover;
+    background-repeat: no-repeat ;
+    background-position: center;
+}
+
+#menu{
+	text-align: left;
+	font-size: 80px;
+	color: whitesmoke ;
+	margin-left: 50px;
+}
 #container{
     width: 1024px;
     margin-left: auto;
@@ -8,8 +37,11 @@ footer{
 	height: 100px;
 	text-align: center;
 }
-h1{
+#meat{
 	color: white;
+	font-size: 84px;
+    padding-top: 80px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 p{
 	color: white;
@@ -27,3 +59,4 @@ section{
 main{
 	text-align: center;
 }
+
