@@ -8,23 +8,9 @@ img{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+button{
+    width: 50px;
+}
 
 .item{
     display: inline-flex;
@@ -34,32 +20,15 @@ img{
     height: 170px;
     width: 170px;
     margin-left: 40px;
+    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 html{
     height: 100%;
 }
 .img{
-    height: 100px;
+    height: 150px;
     width: auto;
 }
 #logo{
@@ -77,6 +46,7 @@ Body{
 #menu{
     text-align: left;
     font-size: 80px;
+    font-style: oblique;
     color: whitesmoke ;
     margin-left: 50px;
 }
@@ -179,6 +149,7 @@ p{
 }
 section{
     text-align: center;
+    margin-top: 80px;
 }
 main{
     text-align: center;
@@ -191,5 +162,11 @@ main{
     width: 1000px;
 }
 #secondSpan{
+    background-color: gray;
     width: 300px;
+}
+#bill{
+    text-align: center;
+    color: white;
+    
 }
