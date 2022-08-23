@@ -2,56 +2,91 @@ var food = [
 
 {
     category:"hamburger",
-    imgSrc:"./food/Cheeseburger.jpg"
+    imgSrc:"./food/Cheeseburger.jpg",
+    price : 9, 
+    id: "cheese Burger"
 },{
     category: "hamburger",
-    imgSrc:"./food/Chicken-Burger.png"
+    imgSrc:"./food/Chicken-Burger.png",
+    price : 9.5, 
+    id : "Chicke Burger"
 },{
     category:"hamburger",
-    imgSrc:"./food/doublecheese.jpg"
+    imgSrc:"./food/doublecheese.jpg",
+    price : 11, 
+    id : "Double cheese Burger"
 },{
     category:"pizza",
-    imgSrc:"./food/margharitta.jpg"
+    imgSrc:"./food/margharitta.jpg",
+    price : 9,
+    id : "Pizza Margharitta " 
 },{
     category:"pizza",
-    imgSrc:"./food/mexican.jpg"
+    imgSrc:"./food/mexican.jpg",
+    price : 14,
+    id: "Pizza Mexican" 
 },{
     category:"pizza",
-    imgSrc:"./food/pizza.jpg"
+    imgSrc:"./food/pizza.jpg",
+    price : 10, 
+    id :  "Pizza Neptune"
 },{
     category:"pizza",
-    imgSrc:"./food/fruit de mer.jpg"
+    imgSrc:"./food/fruit de mer.jpg",
+    price : 17,
+    id : "Pizza Sea Food"
+
 },{
     category:"pasta",
-    imgSrc:"./food/pasta carbonara.jpg"
+    imgSrc:"./food/pasta carbonara.jpg",
+    price : 16,
+    id : "Pasta Carbonara" 
 },{
     category:"pasta",
-    imgSrc:"./food/pasta fruit de mer.jpg"
+    imgSrc:"./food/pasta fruit de mer.jpg",
+    price : 23,
+    id : "Pasta Sea Food" 
 },{
     category:"pasta",
-    imgSrc:"./food/sauce blanche.jpg"
+    imgSrc:"./food/sauce blanche.jpg",
+    price : 20,
+    id : "Pasta with white Sauce" 
 },{
     category:"sandwiches",
-    imgSrc:"./food/chickensandwich.jpg"
+    imgSrc:"./food/chickensandwich.jpg",
+    price : 10,
+    id : "Chicken Sandwich" 
 },{
     category:"sandwiches",
-    imgSrc:"./food/jambon.jpg"
+    imgSrc:"./food/jambon.jpg",
+    price : 8.5,
+    id : "Jambon Sandwich"  
 },
 {
     category:"sandwiches",
-    imgSrc:"./food/tuna.jpg"
+    imgSrc:"./food/tuna.jpg",
+    price : 8,
+    id : "Tuna Sandiwich" 
 }, {
     category:"supplements",
-    imgSrc:"./food/cheese.jpg"
+    imgSrc:"./food/cheese.jpg",
+    price : 3,
+    id : "Cheese" 
 }, {
     category:"supplements",
-    imgSrc:"./food/french.jpg"
+    imgSrc:"./food/french.jpg",
+    price : 4,
+    id : "French Fries" 
 },{
   category:"supplements",
-    imgSrc:"./food/supjambon.jpg" 
+    imgSrc:"./food/supjambon.jpg", 
+    price : 3,
+    id : "Jambon" 
 
 }, {category:"supplements",
-    imgSrc:"./food/mushrooms.jpg"
+    imgSrc:"./food/mushrooms.jpg",
+    price : 2.5,
+    id : "Mushrooms" 
 }
 
 
@@ -69,6 +104,17 @@ var each = function (coll,func){
         }
     }
 }
+function map(coll, f) {
+  var acc = [];
+  if (!Array.isArray(coll)) {
+acc = {};
+  }
+  each(coll, function(element, key) {
+    acc[key] = f(element, key) ;
+  });
+  return acc;
+}
+
 var filter = function(array,predicate){
 var acc = [];
 each(array,function(e,i){
@@ -78,9 +124,26 @@ each(array,function(e,i){
 })
 return acc;
 }
+
+ function reduce(array, f, start) { 
+       var acc = start; 
+       each(array, function(element) { 
+             acc = f(acc, element); 
+       }); 
+
+       return acc; 
+ }
+
  function renderImages(array){
     each(array, function(e,i){
-        var div=$(`<div class='item ${e.category}'><img src="${e.imgSrc}"></div>`)
+        var btn = $(`<button class = "price" > ${e.price} dt </button>`)
+        btn.click(function(l){
+            var p = $(`<p>${e.id} <span class = "prc">${e.price}</span> dt</p>`)
+           $("#secondSpan").append(p)
+        })
+        var div=$(`<div  class='item ${e.category}'><img src="${e.imgSrc}"> </div>`)
+div.append(btn)
+   
           div.appendTo($('#littleSpan') )
           })
  } 
@@ -135,3 +198,40 @@ $("#supplements").on("click", function(){
     renderImages(renderSupplements(food))
     
     })  
+
+$("#secondSpan").append($("<h1 id = 'bill'> Bill </h1>"))
+
+/*function sum(array){
+
+    return reduce(array,function(result,e,i){
+  return  result + e
+    },0)
+
+    }
+
+    var result = sum($(".prc"))
+    $("#finished").click(function(){
+        $("#secondSpan").append(`<p>${result}</p>`)
+    })*/
+
+function sum2(){
+    var result=0
+    var k=$(".prc");
+    for (var i =0;i<k.length;i++){
+        result+=parseInt(k[i].innerHTML)
+    }
+    return result
+    $("#cost").css("color", "yellow")
+}
+$("#finished").click(function(){
+    $("#secondSpan").append(`<p id = "cost"> your Order cost : ${sum2()} dt </p>`)
+})
+$("#finished").css("float","right")
+$("#finished").css("margin-right","30px")
+$("#finished").css("background-color","black")
+$("#finished").css("color","white")
+$("#finished").css("height","40px")
+$("#finished").css("width","100px")
+
+
+
