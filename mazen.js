@@ -3,72 +3,90 @@ var food = [
 {
     category:"hamburger",
     imgSrc:"./food/Cheeseburger.jpg",
-    price : 9 
+    price : 9, 
+    id: "cheese Burger"
 },{
     category: "hamburger",
     imgSrc:"./food/Chicken-Burger.png",
-    price : 9.5 
+    price : 9.5, 
+    id : "Chicke Burger"
 },{
     category:"hamburger",
     imgSrc:"./food/doublecheese.jpg",
-    price : 11 
+    price : 11, 
+    id : "Double cheese Burger"
 },{
     category:"pizza",
     imgSrc:"./food/margharitta.jpg",
-    price : 9 
+    price : 9,
+    id : "Pizza Margharitta " 
 },{
     category:"pizza",
     imgSrc:"./food/mexican.jpg",
-    price : 14 
+    price : 14,
+    id: "Pizza Mexican" 
 },{
     category:"pizza",
     imgSrc:"./food/pizza.jpg",
-    price : 10 
+    price : 10, 
+    id :  "Pizza Neptune"
 },{
     category:"pizza",
     imgSrc:"./food/fruit de mer.jpg",
-    price : 17 
+    price : 17,
+    id : "Pizza Sea Food"
+
 },{
     category:"pasta",
     imgSrc:"./food/pasta carbonara.jpg",
-    price : 16 
+    price : 16,
+    id : "Pasta Carbonara" 
 },{
     category:"pasta",
     imgSrc:"./food/pasta fruit de mer.jpg",
-    price : 23 
+    price : 23,
+    id : "Pasta Sea Food" 
 },{
     category:"pasta",
     imgSrc:"./food/sauce blanche.jpg",
-    price : 20 
+    price : 20,
+    id : "Pasta with white Sauce" 
 },{
     category:"sandwiches",
     imgSrc:"./food/chickensandwich.jpg",
-    price : 10 
+    price : 10,
+    id : "Chicken Sandwich" 
 },{
     category:"sandwiches",
     imgSrc:"./food/jambon.jpg",
-    price : 8.5 
+    price : 8.5,
+    id : "Jambon Sandwich"  
 },
 {
     category:"sandwiches",
     imgSrc:"./food/tuna.jpg",
-    price : 8 
+    price : 8,
+    id : "Tuna Sandiwich" 
 }, {
     category:"supplements",
     imgSrc:"./food/cheese.jpg",
-    price : 3 
+    price : 3,
+    id : "Cheese" 
 }, {
     category:"supplements",
     imgSrc:"./food/french.jpg",
-    price : 4 
+    price : 4,
+    id : "French Fries" 
 },{
   category:"supplements",
     imgSrc:"./food/supjambon.jpg", 
-    price : 3 
+    price : 3,
+    id : "Jambon" 
 
 }, {category:"supplements",
     imgSrc:"./food/mushrooms.jpg",
-    price : 2.5 
+    price : 2.5,
+    id : "Mushrooms" 
 }
 
 
@@ -86,6 +104,17 @@ var each = function (coll,func){
         }
     }
 }
+function map(coll, f) {
+  var acc = [];
+  if (!Array.isArray(coll)) {
+acc = {};
+  }
+  each(coll, function(element, key) {
+    acc[key] = f(element, key) ;
+  });
+  return acc;
+}
+
 var filter = function(array,predicate){
 var acc = [];
 each(array,function(e,i){
@@ -96,12 +125,20 @@ each(array,function(e,i){
 return acc;
 }
 
+ function reduce(array, f, start) { 
+       var acc = start; 
+       each(array, function(element) { 
+             acc = f(acc, element); 
+       }); 
+
+       return acc; 
+ }
 
  function renderImages(array){
     each(array, function(e,i){
         var btn = $(`<button class = "price" > ${e.price} dt </button>`)
         btn.click(function(l){
-            var p = $(`<p>${e.price}</p>`)
+            var p = $(`<p>${e.id} <span class = "prc">${e.price}</span> dt</p>`)
            $("#secondSpan").append(p)
         })
         var div=$(`<div  class='item ${e.category}'><img src="${e.imgSrc}"> </div>`)
@@ -164,25 +201,32 @@ $("#supplements").on("click", function(){
 
 $("#secondSpan").append($("<h1 id = 'bill'> Bill </h1>"))
 
+/*function sum(array){
+
+    return reduce(array,function(result,e,i){
+  return  result + e
+    },0)
+
+    }
+
+    var result = sum($(".prc"))
+    $("#finished").click(function(){
+        $("#secondSpan").append(`<p>${result}</p>`)
+    })*/
+
+function sum2(){
+    var result=0
+    var k=$(".prc");
+    for (var i =0;i<k.length;i++){
+        result+=parseInt(k[i].innerHTML)
+    }
+    return result
+    $("#cost").css("color", "yellow")
+}
+$("#finished").click(function(){
+    $("#secondSpan").append(`<p id = "cost"> your Order cost : ${sum2()} dt </p>`)
+})
 
 
-// $(".price", this).click(function(){
-//   var P =  $("<p></p> ")
-  
-//   P.text(this)
-  
-//   P.appendTo($("#secondSpan"))  
 
-// })
 
-// function add (){
-//     var item = $("")
-// }
-
-// $('.price').click(function(){
-//     for(var i =0;i<$('.price').length;i++){
-//         if($(".price")[i].data("clicked",true)){
-
-//         }
-//     }
-// })
