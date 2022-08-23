@@ -84,4 +84,54 @@ return acc;
           div.appendTo($('#littleSpan') )
           })
  } 
-renderImages(food)
+function renderPizza(array){
+    return filter(array,function(e,i){
+        return e.category=== "pizza"
+    })
+}
+
+var renderHamburger = function (arr){
+    return filter(arr, function(e,i){
+        return e.category=== "hamburger"
+    })
+}
+function renderSandiwches(array){
+    return filter(array,function(e,i){
+        return e.category=== "sandwiches"
+    })
+}
+function renderPasta(array){
+    return filter(array,function(e,i){
+        return e.category=== "pasta"
+    })
+}
+function renderSupplements(array){
+    return filter(array,function(e,i){
+        return e.category=== "supplements"
+    })
+}
+$("#pizza").on("click", function(){
+    $(".item").remove()
+    renderImages(renderPizza(food))
+    
+    }) 
+$("#hamburger").on("click", function(){
+    $(".item").remove()
+    renderImages(renderHamburger(food))
+    
+    })  
+$("#sandwiches").on("click", function(){
+    $(".item").remove()
+    renderImages(renderSandiwches(food))
+    
+    })  
+$("#pasta").on("click", function(){
+    $(".item").remove()
+    renderImages(renderPasta(food))
+    
+    })  
+$("#supplements").on("click", function(){
+    $(".item").remove()
+    renderImages(renderSupplements(food))
+    
+    })  
