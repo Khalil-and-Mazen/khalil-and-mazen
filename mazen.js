@@ -97,7 +97,7 @@ return acc;
 }
  function renderImages(array){
     each(array, function(e,i){
-        var div=$(`<div class='item ${e.category}'><img src="${e.imgSrc}"><button> click me <button></div>`)
+        var div=$(`<div class='item ${e.category}'><img src="${e.imgSrc}"><button> "click me" <button></div>`)
 
           div.appendTo($('#littleSpan') )
           })
