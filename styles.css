@@ -126,3 +126,13 @@ section{
 main{
     text-align: center;
 }
+#containerSpan{
+    display: flex;
+}
+#littleSpan{
+    color: red;
+    width: 850px;
+}
+#secondSpan{
+    width: 300px;
+}
