@@ -2,19 +2,14 @@
     display: inline-flex;
 }
 
-img{
-    height: 100px;
-    width: 100px;
-}
+
 
 
 button{
     width: 50px;
 }
 
-.item{
-    display: inline-flex;
-}
+
 
 img{
     height: 170px;
@@ -34,6 +29,7 @@ html{
 #logo{
     text-align: center;
     margin-top: 20px;
+
     
 }
 Body{
@@ -50,81 +46,7 @@ Body{
     color: whitesmoke ;
     margin-left: 50px;
 }
-#pizza{
-  display: block;
-  height: 40px;
-  width: 150px;
-  border: 2px solid #BFC0C0;
-  margin: 10px 20px 20px 20px;
-  color: black;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: .8em;
-  letter-spacing: 1.5px;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-#hamburger{
-     display: block;
-  height: 40px;
-  width: 150px;
-  border: 2px solid #BFC0C0;
-  margin: 20px 20px 20px 20px;
-  color: black;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: .8em;
-  letter-spacing: 1.5px;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-#sandwiches{
-     display: block;
-  height: 40px;
-  width: 150px;
-  border: 2px solid #BFC0C0;
-  margin: 20px 20px 20px 20px;
-  color: black;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: .8em;
-  letter-spacing: 1.5px;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-#pasta{
-     display: block;
-  height: 40px;
-  width: 150px;
-  border: 2px solid #BFC0C0;
-  margin: 20px 20px 20px 20px;
-  color: black;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: .8em;
-  letter-spacing: 1.5px;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-#supplements{
-     display: block;
-  height: 40px;
-  width: 150px;
-  border: 2px solid #BFC0C0;
-  margin: 20px 20px 20px 20px;
-  color: black;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: .8em;
-  letter-spacing: 1.5px;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
+
 footer{
     background-color: rgba(0, 0, 0, 0.678);
     height: 100px;
@@ -164,17 +86,18 @@ main{
 #secondSpan{
     background-color: gray;
     width: 300px;
+    opacity: 0.8;
 }
 #bill{
     text-align: center;
     color: white;
     
 }
-#finished{
-    float: right;
-    margin-right: 20px;
-background-color: black;
-color: white;
-width: auto;
+.p{
+    margin-left: 20px;
+    font-size: 20px;
 }
-
+#cost{
+    margin-left: 20px;
+    font-size: 25px;
+}
