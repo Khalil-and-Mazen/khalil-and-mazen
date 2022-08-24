@@ -141,7 +141,7 @@ return acc;
             var p = $(`<p class="p">${e.id} <span class = "prc">${e.price}</span> dt</p>`)
            $("#secondSpan").append(p)
         })
-        var div=$(`<div  class='item ${e.category}'><img src="${e.imgSrc}"> </div>`)
+        var div=$(`<div  class='item ${e.category}'> <p> ${e.id} </p> <img src="${e.imgSrc}">  </div>`)
 div.append(btn)
    
           div.appendTo($('#littleSpan') )
@@ -201,15 +201,7 @@ $("#supplements").on("click", function(){
 
 $("#secondSpan").append($("<h1 id = 'bill'> Bill </h1>"))
 
-/*function sum(array){
-    return reduce(array,function(result,e,i){
-  return  result + e
-    },0)
-    }
-    var result = sum($(".prc"))
-    $("#finished").click(function(){
-        $("#secondSpan").append(`<p>${result}</p>`)
-    })*/
+
 
 function sum2(){
     var result=0
@@ -218,11 +210,18 @@ function sum2(){
         result+=parseInt(k[i].innerHTML)
     }
     return result
-    $("#cost").css("color", "yellow")
 }
 $("#finished").click(function(){
     $("#secondSpan").append(`<p id = "cost"> your Order cost : ${sum2()} dt </p>`)
 })
+
+$("#reset").click(function(){
+    $(".p").remove()
+    $("#cost").remove()
+})
+
+
+
 $("#finished").css("float","right")
 $("#finished").css("margin-right","30px")
 $("#finished").css("background-color","black")
@@ -298,4 +297,10 @@ $("#supplements").css("letter-Spacing","1.5px")
 $("#supplements").css("align-items","center")
 $("#supplements").css("justify-content","center")
 $("#supplements").css("overflow","hidden")
+$("#reset").css("float","right")
+$("#reset").css("margin-right","30px")
+$("#reset").css("background-color","black")
+$("#reset").css("color","white")
+$("#reset").css("height","40px")
+$("#reset").css("width","100px")
 
