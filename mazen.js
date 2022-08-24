@@ -221,17 +221,30 @@ function sum2(){
         result+=parseInt(k[i].innerHTML)
     }
     return result
-    $("#cost").css("color", "yellow")
 }
 $("#finished").click(function(){
     $("#secondSpan").append(`<p id = "cost"> your Order cost : ${sum2()} dt </p>`)
 })
+$("#reset").click(function(){
+    $(".p").remove()
+    $("#cost").remove()
+})
+
+
+
 $("#finished").css("float","right")
 $("#finished").css("margin-right","30px")
 $("#finished").css("background-color","black")
 $("#finished").css("color","white")
 $("#finished").css("height","40px")
 $("#finished").css("width","100px")
+
+$("#reset").css("float","right")
+$("#reset").css("margin-right","30px")
+$("#reset").css("background-color","black")
+$("#reset").css("color","white")
+$("#reset").css("height","40px")
+$("#reset").css("width","100px")
 $("#pizza").css("display","block")
 $("#pizza").css("height","40px")
 $("#pizza").css("width","150px")
