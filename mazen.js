@@ -141,7 +141,7 @@ return acc;
             var p = $(`<p class="p">${e.id} <span class = "prc">${e.price}</span> dt</p>`)
            $("#secondSpan").append(p)
         })
-        var div=$(`<div  class='item ${e.category}'><img src="${e.imgSrc}"> </div>`)
+        var div=$(`<div  class='item ${e.category}'><p>${e.id}</p><img src="${e.imgSrc}"> </div>`)
 div.append(btn)
    
           div.appendTo($('#littleSpan') )
